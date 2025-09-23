@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galleri</title>
+    <link rel="stylesheet"href="style.css">
+</head>
+
+<style> 
+
+   .slideshow-container { 
+     max-width: 400px;
+     width: 100%;
+     border-radius: 8px;
+   }
+   .slide { 
+    display: none;
+    width: 100%;
+    margin: auto;
+   }
+   Prickar under bilspsel
+   .dots {
+    text-align: conter;
+    margin:  10px auto;
+    }
+</style>
+
+<body>
+    <head> 
+        <div>
+            <h1> Galleri</h1>
+        </div>
+      
+        <nav> 
+        <ul> 
+            <li><a href="index.html">Start</a></li>
+            <li><a href="information.html">Information</a></li>
+            <li><a href="galleri.html">Galleri</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+        </nav>
+    </head>
+    </body>
+
+<Main>
+    <section> 
+    <h2>Tårtor</h2>
+          <img src="images/IMG_9746.JPG" alt="Tårta 1" class="tårta">
+          <img src="images/IMG_9747.JPG" alt="Tårta 2" class="tårta">
+          <img src="images/IMG_9754.JPG" alt="Tårta 3" Class="tårta">
+   </section>
+</Main>
+
+ <footer>Mitt hobby</footer>
+<script> 
+    let index = 0;
+ showSlides ();
+
+  function showSlides() {
+    let slides = document.querySelectorAll(".tårta");
+
+    slides.forEach(slide=> { 
+        slide.style.display = "none"
+});
+
+    index++;
+    if ( index> slides.length) { index = 1;}
+
+    slides[index-1] .style.display = "block"
+    setTimeout(showSlides,4000);
+   }   
+</script>   
+</body>
+</html>
